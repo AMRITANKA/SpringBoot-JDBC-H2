@@ -13,10 +13,10 @@ public class CourseJdbcCommandLineRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		courseJdbcRepository.insert(new Course(1, "Azure", "xyz"));
-		courseJdbcRepository.insert(new Course(2, "OCI", "fhz"));
-		courseJdbcRepository.insert(new Course(3, "AWS", "abc"));
-		courseJdbcRepository.insert(new Course(4, "GCP", "ijk"));
+		courseJdbcRepository.insert(new Course(1, "Azure", "Author1"));
+		courseJdbcRepository.insert(new Course(2, "OCI", "Author2"));
+		courseJdbcRepository.insert(new Course(3, "AWS", "Author3"));
+		courseJdbcRepository.insert(new Course(4, "GCP", "Author4"));
 		courseJdbcRepository.deleteById(2);
 		Course byId = courseJdbcRepository.findById(3);
 		System.out.println(byId);
