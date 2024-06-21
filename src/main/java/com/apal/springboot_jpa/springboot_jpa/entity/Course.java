@@ -1,7 +1,18 @@
 package com.apal.springboot_jpa.springboot_jpa.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="course_table")
 public class Course {
+	@Id
+	@GeneratedValue
 	private long id;
+	@Column(name="name")
 	private String name;
 	private String author;
 
